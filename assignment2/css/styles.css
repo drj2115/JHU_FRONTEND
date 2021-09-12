@@ -22,42 +22,36 @@ h1.sm {
     margin-left: .5em;
 }
 
-p {
-    padding: 10px;
-}
-
 div.row {
     width: 100%;
     min-width: 200px;
 }
 
 div.cell {
-    margin-right: .5em;
-    margin-left: .5em;
-    margin-bottom: 1em;
     background-color: gray;
-    height: 150px;
     border: 1px solid black;
+    margin-left: .5em;
+    margin-right: .5em;
+    margin-bottom: 1em;
+}
+
+div.description {
+    height: 150px;
     overflow: hidden;
+    padding: .5em;
 }
 
 div:hover {
-    overflow-y: auto;
+    overflow: auto;
 }
 
 div.label {
-    text-align: right;
-    width: min-content;
-    padding-right: 2em;
+    outline: 1px solid black;
     padding-left: 2em;
-    border-left: 1px solid black;
-    border-bottom: 1px solid black;
-    margin-left: auto;
+    padding-right: 2em;
+    width: min-content;
     margin-right: 0;
-    font-size: 1.25em;
-    position: relative;
-    bottom: 165px;
-    right: 9px;
+    margin-left: auto;
 }
 
 div#chicken {
@@ -93,6 +87,18 @@ div#sushi {
     h1.sm {
         display: none;
     }
+    div.label-lg {
+        outline: 1px solid black;
+        padding-left: 2em;
+        padding-right: 2em;
+        width: min-content;
+        margin-right: 0;
+        margin-left: auto;
+        text-align: center;
+    }
+    label.sm {
+        display: none;
+    }
 }
 
 /********** Medium devices only **********/
@@ -115,11 +121,33 @@ div#sushi {
     h1.sm {
         display: none;
     }
+    div.label-lg {
+        outline: 1px solid black;
+        padding-left: 2em;
+        padding-right: 2em;
+        width: min-content;
+        margin-right: 0;
+        margin-left: auto;
+        text-align: center;
+    }
+    label.sm {
+        display: none;
+    }
 }
 
 /********** Small devices only **********/
 @media (max-width: 767px) {
     h1.lg {
+        display: none;
+    }
+    div.label-sm {
+        outline: 1px solid black;
+        padding-left: 2em;
+        padding-right: 2em;
+        width: 100%;
+        text-align: center;
+    }
+    label.lg {
         display: none;
     }
 }
