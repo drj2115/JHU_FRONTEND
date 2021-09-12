@@ -15,8 +15,15 @@ h1 {
     font-size: 1.75em;
 }
 
+h1.sm {
+    text-align: left;
+    font-size: 1.5em;
+    font-family: "Curlz MT", sans-serif;
+    margin-left: .5em;
+}
+
 p {
-    padding: 5px;
+    padding: 10px;
 }
 
 div.row {
@@ -31,7 +38,11 @@ div.cell {
     background-color: gray;
     height: 150px;
     border: 1px solid black;
-    overflow: auto;
+    overflow: hidden;
+}
+
+div:hover {
+    overflow-y: auto;
 }
 
 div.label {
@@ -44,6 +55,9 @@ div.label {
     margin-left: auto;
     margin-right: 0;
     font-size: 1.25em;
+    position: relative;
+    bottom: 165px;
+    right: 9px;
 }
 
 div#chicken {
@@ -76,6 +90,9 @@ div#sushi {
     .col-lg-10 { width: 83.33%; }
     .col-lg-11 { width: 91.66%; }
     .col-lg-12 { width: 100%; }
+    h1.sm {
+        display: none;
+    }
 }
 
 /********** Medium devices only **********/
@@ -95,8 +112,14 @@ div#sushi {
     .col-md-10 { width: 83.33%; }
     .col-md-11 { width: 91.66%; }
     .col-md-12 { width: 100%; }
+    h1.sm {
+        display: none;
+    }
 }
 
 /********** Small devices only **********/
 @media (max-width: 767px) {
+    h1.lg {
+        display: none;
+    }
 }
