@@ -1,5 +1,3 @@
-
-/********** Base styles **********/
 * {
     box-sizing: border-box;
 }
@@ -10,16 +8,17 @@ body {
 }
 
 h1 {
-    margin-bottom: 15px;
     text-align: center;
     font-size: 1.75em;
+    margin-left: .5rem;
+    margin-right: .5rem;
+    margin-bottom: 1rem;
 }
 
 h1.sm {
     text-align: left;
     font-size: 1.5em;
     font-family: "Curlz MT", sans-serif;
-    margin-left: .5em;
 }
 
 div.row {
@@ -30,28 +29,19 @@ div.row {
 div.cell {
     background-color: gray;
     border: 1px solid black;
-    margin-left: .5em;
-    margin-right: .5em;
-    margin-bottom: 1em;
+    margin-left: .5rem;
+    margin-right: .5rem;
+    margin-bottom: 1rem;
 }
 
 div.description {
     height: 150px;
     overflow: hidden;
-    padding: .5em;
+    padding: .5rem;
 }
 
 div:hover {
     overflow: auto;
-}
-
-div.label {
-    outline: 1px solid black;
-    padding-left: 2em;
-    padding-right: 2em;
-    width: min-content;
-    margin-right: 0;
-    margin-left: auto;
 }
 
 div#chicken {
@@ -67,7 +57,7 @@ div#sushi {
     background-color: #e7b40c;
 }
 
-/********** Large devices only **********/
+/* Large devices */
 @media (min-width: 992px) {
     .col-lg-1, .col-lg-2, .col-lg-3, .col-lg-4, .col-lg-5, .col-lg-6, .col-lg-7, .col-lg-8, .col-lg-9, .col-lg-10, .col-lg-11, .col-lg-12 {
         float: left;
@@ -84,24 +74,9 @@ div#sushi {
     .col-lg-10 { width: 83.33%; }
     .col-lg-11 { width: 91.66%; }
     .col-lg-12 { width: 100%; }
-    h1.sm {
-        display: none;
-    }
-    div.label-lg {
-        outline: 1px solid black;
-        padding-left: 2em;
-        padding-right: 2em;
-        width: min-content;
-        margin-right: 0;
-        margin-left: auto;
-        text-align: center;
-    }
-    label.sm {
-        display: none;
-    }
 }
 
-/********** Medium devices only **********/
+/* Medium devices */
 @media (min-width: 768px) and (max-width: 991px) {
     .col-md-1, .col-md-2, .col-md-3, .col-md-4, .col-md-5, .col-md-6, .col-md-7, .col-md-8, .col-md-9, .col-md-10, .col-md-11, .col-md-12 {
         float: left;
@@ -118,13 +93,17 @@ div#sushi {
     .col-md-10 { width: 83.33%; }
     .col-md-11 { width: 91.66%; }
     .col-md-12 { width: 100%; }
+}
+
+/* Medium and Large devices */
+@media (min-width: 778px) {
     h1.sm {
         display: none;
     }
     div.label-lg {
         outline: 1px solid black;
-        padding-left: 2em;
-        padding-right: 2em;
+        padding-left: 2rem;
+        padding-right: 2rem;
         width: min-content;
         margin-right: 0;
         margin-left: auto;
@@ -135,15 +114,15 @@ div#sushi {
     }
 }
 
-/********** Small devices only **********/
+/* Small devices */
 @media (max-width: 767px) {
     h1.lg {
         display: none;
     }
     div.label-sm {
         outline: 1px solid black;
-        padding-left: 2em;
-        padding-right: 2em;
+        padding-left: 1rem;
+        padding-right: 1rem;
         width: 100%;
         text-align: center;
     }
