@@ -3,55 +3,66 @@
 * {
     box-sizing: border-box;
 }
+
+body {
+    font-size: 100%;
+    font-family: "Comic Sans MS", serif;
+}
+
 h1 {
     margin-bottom: 15px;
+    text-align: center;
+    font-size: 1.75em;
+}
+
+p {
+    padding: 5px;
+}
+
+div.row {
+    width: 100%;
+    min-width: 200px;
 }
 
 div.cell {
-    margin: 1em;
+    margin-right: .5em;
+    margin-left: .5em;
+    margin-bottom: 1em;
     background-color: gray;
     height: 150px;
-    border: 2px solid black;
-    font-family: "Comic Sans MS";
+    border: 1px solid black;
     overflow: auto;
-}
-
-/* Simple Responsive Framework. */
-div.row {
-    width: 100%;
 }
 
 div.label {
     text-align: right;
     width: min-content;
-    padding-right: 10px;
-    padding-left: 10px;
+    padding-right: 2em;
+    padding-left: 2em;
+    border-left: 1px solid black;
+    border-bottom: 1px solid black;
+    margin-left: auto;
+    margin-right: 0;
+    font-size: 1.25em;
 }
 
 div#chicken {
     background-color: #c77f7f;
-    margin-left: auto;
-    margin-right: 0;
 }
 
 div#beef {
     background-color: #9b1f21;
     color: white;
-    margin-left: auto;
-    margin-right: 0;
 }
 
 div#sushi {
     background-color: #e7b40c;
-    margin-left: auto;
-    margin-right: 0;
 }
 
 /********** Large devices only **********/
 @media (min-width: 992px) {
     .col-lg-1, .col-lg-2, .col-lg-3, .col-lg-4, .col-lg-5, .col-lg-6, .col-lg-7, .col-lg-8, .col-lg-9, .col-lg-10, .col-lg-11, .col-lg-12 {
         float: left;
-        /*border: 1px solid green;*/
     }
     .col-lg-1 { width: 8.33%; }
     .col-lg-2 { width: 16.66%; }
@@ -71,7 +82,6 @@ div#sushi {
 @media (min-width: 768px) and (max-width: 991px) {
     .col-md-1, .col-md-2, .col-md-3, .col-md-4, .col-md-5, .col-md-6, .col-md-7, .col-md-8, .col-md-9, .col-md-10, .col-md-11, .col-md-12 {
         float: left;
-        /*border: 1px solid green;*/
     }
     .col-md-1 { width: 8.33%; }
     .col-md-2 { width: 16.66%; }
