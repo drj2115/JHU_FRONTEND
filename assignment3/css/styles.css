@@ -1,0 +1,28 @@
+@import "../bootstrap-5.1.1-dist/css/bootstrap.min.css";
+
+body {
+    background-color: purple;
+}
+
+.row {
+    margin-bottom: 15px;
+}
+
+/* Direct descendants of row. */
+.row > div {
+    border: 2px solid red;
+    background-color: gray;
+}
+
+#header-nav {
+    background-color: #f6b319;
+    border-radius: 0;
+    border: 0;
+}
+
+#logo-img {
+    content: url('../../assignment2/images/desktop.png');
+    width: 150px;
+    height: 150px;
+    margin: 10px 15px 10px 0;
+}
