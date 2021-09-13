@@ -3,7 +3,7 @@
 body {
     font-size: 100%;
     font-family: "Comic Sans MS", serif;
-    background-color: purple;
+    background-color: #bd92bd;
 }
 
 #navMenuItems {
@@ -58,7 +58,35 @@ body {
 
 /* Medium and large devices */
 @media (min-width: 576px) {
-    #navMenuItems button {
+    #navMenuItems a {
         display: none;
     }
+}
+
+div.cell {
+    border: 1px solid black;
+    padding: .5rem;
+}
+
+#menuItems.row {
+    margin: 0;
+    padding: 0;
+}
+
+.col-md-4, .col-sm-6 {
+    padding-left: .5rem;
+    padding-right: .5rem;
+    padding-bottom: 1rem;
+}
+
+#chickenCell {
+    background-color: #C77F7FFF;
+}
+
+#beefCell {
+    background-color: #9B1F21FF;
+}
+
+#sushiCell {
+    background-color: #E7B40CFF;
 }
