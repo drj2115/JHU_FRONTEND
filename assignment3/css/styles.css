@@ -1,0 +1,91 @@
+@import "../bootstrap-5.1.1-dist/css/bootstrap.min.css";
+
+body {
+    font-size: 100%;
+    font-family: "Comic Sans MS", serif;
+    background-color: #bd92bd;
+}
+
+#navMenuItems {
+    margin-top:.5rem;
+    margin-bottom:-.5rem;
+    margin-left:-.75rem;
+    margin-right:-.75rem;
+}
+
+#navMenuItems a {
+    border-radius: 0;
+}
+
+#chickenButton.btn-primary,
+#chickenButton.btn-primary:active,
+#chickenButton.btn-primary:visited,
+#chickenButton.btn-primary:focus {
+    background-color: #C77F7FFF;
+    border-color: #C77F7FFF;
+}
+
+#chickenButton.btn-primary:hover {
+    background-color: #b47171;
+    border-color: #b47171;
+}
+
+#beefButton.btn-primary,
+#beefButton.btn-primary:active,
+#beefButton.btn-primary:visited,
+#beefButton.btn-primary:focus {
+    background-color: #9B1F21FF;
+    border-color: #9B1F21FF;
+}
+
+#beefButton.btn-primary:hover {
+    background-color: #831719;
+    border-color: #831719;
+}
+
+#sushiButton.btn-primary,
+#sushiButton.btn-primary:active,
+#sushiButton.btn-primary:visited,
+#sushiButton.btn-primary:focus {
+    background-color: #E7B40CFF;
+    border-color: #E7B40CFF;
+}
+
+#sushiButton.btn-primary:hover {
+    background-color: #cc9f0a;
+    border-color: #cc9f0a;
+}
+
+/* Medium and large devices */
+@media (min-width: 576px) {
+    #navMenuItems a {
+        display: none;
+    }
+}
+
+div.cell {
+    padding: .5rem;
+}
+
+#menuItems.row {
+    margin: 0;
+    padding: 0;
+}
+
+.col-md-4, .col-sm-6 {
+    padding-left: .5rem;
+    padding-right: .5rem;
+    padding-bottom: 1rem;
+}
+
+#chickenCell {
+    background-color: #C77F7FFF;
+}
+
+#beefCell {
+    background-color: #9B1F21FF;
+}
+
+#sushiCell {
+    background-color: #E7B40CFF;
+}
