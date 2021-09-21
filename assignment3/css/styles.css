@@ -13,8 +13,8 @@ body {
     margin-right:-.75rem;
 }
 
-#navMenuItems button {
-    border-radius:0;
+#navMenuItems a {
+    border-radius: 0;
 }
 
 #chickenButton.btn-primary,
@@ -64,7 +64,6 @@ body {
 }
 
 div.cell {
-    border: 1px solid black;
     padding: .5rem;
 }
 
