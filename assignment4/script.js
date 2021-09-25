@@ -60,4 +60,15 @@ WARNING!!! WARNING!!!
             helloSpeaker.speak(name);
         }
     }
+
+    // Additional JHU step - use the map function to create an array based on the names array. This array
+    // will contain the greetings based on the names with the same rules as implemented previously. The
+    // function passed into the map function should not be an inline function, i.e., separate it into its
+    // own named function and pass it into the map function as a value. The end result should be that the
+    // list prints out twice in the browser console after you complete this part.
+    function getGreeting(name) {
+        return name.charAt(0).toLowerCase() === 'j' ? byeSpeaker.speakSimple(name) : helloSpeaker.speakSimple(name);
+    }
+    var namesWithGreetings = names.map(getGreeting);
+    console.log(namesWithGreetings);
 })();
