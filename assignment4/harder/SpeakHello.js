@@ -1,7 +1,8 @@
 // STEP 2: Wrap the entire contents of SpeakHello.js inside of an IIFE
 (function () {
 
-    // STEP 3: Create an object, called 'helloSpeaker'
+    // STEP 3: Create an object, called 'helloSpeaker' to which you will attach
+    // the "speak" method and which you will expose to the global context
     var helloSpeaker = new Object();
 
     // DO NOT attach the speakWord variable to the 'helloSpeaker' object.
@@ -14,6 +15,7 @@
     }
     helloSpeaker.speak = speak;
 
-    // STEP 5: Expose the 'helloSpeaker' object to the global scope
+    // STEP 5: Expose the 'helloSpeaker' object to the global scope. Name it
+    // 'helloSpeaker' on the global scope as well.
     window.helloSpeaker = helloSpeaker;
 })();
