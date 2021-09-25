@@ -31,7 +31,7 @@ WARNING!!! WARNING!!!
 
 // STEP 1:
 // Wrap the entire contents of script.js inside of an IIFE
-(function () { // IIFE
+(function (callbackfn) { // IIFE
     var names = ["Yaakov", "John", "Jen", "Jason", "Paul", "Frank", "Larry", "Paula", "Laura", "Jim"];
 
     // STEP 10:
@@ -71,4 +71,25 @@ WARNING!!! WARNING!!!
     }
     var namesWithGreetings = names.map(getGreeting);
     console.log(namesWithGreetings);
+    for (var idx in namesWithGreetings) {
+        console.log(namesWithGreetings[idx]);
+    }
+
+    // Additional JHU step - use the reduce function to create 2 separate arrays: one with all the ‘hello’
+    // greetings and another with all the good bye greetings. Then, loop over each array (obviously separately)
+    // and print out the greetings to the console with console.log. You are required to use {hello: [], bye: []}
+    // as your initialValue.
+    function reduceGreetings(outputArrays, currName) {
+        currName.charAt(0).toLowerCase() === 'g' ? outputArrays.bye.push(currName) : outputArrays.hello.push(currName);
+        return outputArrays;
+    }
+    var reducedNamesWithGreetings = namesWithGreetings.reduce(reduceGreetings, {hello: [], bye: []});
+    console.log(reducedNamesWithGreetings.hello);
+    for (var idx in reducedNamesWithGreetings.hello) {
+        console.log(reducedNamesWithGreetings.hello[idx]);
+    }
+    console.log(reducedNamesWithGreetings.bye);
+    for (var idx in reducedNamesWithGreetings.bye) {
+        console.log(reducedNamesWithGreetings.bye[idx]);
+    }
 })();
