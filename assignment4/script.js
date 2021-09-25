@@ -54,11 +54,7 @@ WARNING!!! WARNING!!!
         // 'j'. If the same, call byeSpeaker's 'speak' method with the current name
         // in the loop. Otherwise, call helloSpeaker's 'speak' method with the current
         // name in the loop.
-        if (firstLetter === 'j') {
-            byeSpeaker.speak(name);
-        } else {
-            helloSpeaker.speak(name);
-        }
+        firstLetter === 'j' ? byeSpeaker.speak(name) : helloSpeaker.speak(name);
     }
 
     // Additional JHU step - use the map function to create an array based on the names array. This array
