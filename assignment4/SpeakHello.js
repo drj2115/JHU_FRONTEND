@@ -18,4 +18,11 @@
     // STEP 5: Expose the 'helloSpeaker' object to the global scope. Name it
     // 'helloSpeaker' on the global scope as well.
     window.helloSpeaker = helloSpeaker;
+
+    // Additional JHU step - Add another method called speakSimple that is externally
+    // exposed just like the speak method is. The speakSimple method should not use console.log,
+    // but instead should simply return the greeting concatenated to the passed in name argument.
+    helloSpeaker.speakSimple = function(name) {
+        return speakWord + " " + name;
+    }
 })();
