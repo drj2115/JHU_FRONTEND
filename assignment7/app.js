@@ -3,7 +3,8 @@
     angular.module('ShoppingListCheckOff', [])
         .controller('ToBuyController', ToBuyController)
         .controller('AlreadyBoughtController', AlreadyBoughtController)
-        .service('ShoppingListCheckOffService', ShoppingListCheckOffService);
+        .service('ShoppingListCheckOffService', ShoppingListCheckOffService)
+        .filter('customCurrency', customCurrencyFilter);
     ToBuyController.$inject = ['ShoppingListCheckOffService'];
     AlreadyBoughtController.$inject = ['ShoppingListCheckOffService'];
 
@@ -98,6 +99,12 @@
             if (Number.isInteger(quantity) && quantity > 0 && quantity <= item.total) {
                 this.cart.push(this.items.splice(idx, 1)[0]);
             }
+        }
+    }
+
+    function customCurrencyFilter() {
+        return function (val) {
+            return '$$$' + val.toFixed(2);
         }
     }
 })();
