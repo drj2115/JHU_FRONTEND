@@ -16,7 +16,8 @@
     }
 
     function AlreadyBoughtController(ShoppingListCheckOffService) {
-        return ShoppingListCheckOffService.cart;
+        var cart = this;
+        cart.items = ShoppingListCheckOffService.cart;
     }
 
     function ShoppingListCheckOffService() {
@@ -63,8 +64,8 @@
             }
         ];
         this.cart = [];
-        var addToCart = function(idx) {
-            cart.push(items.splice(idx, 1))
+        this.addToCart = function(idx) {
+            this.cart.push(this.items.splice(idx, 1)[0]);
         }
     }
 })();
