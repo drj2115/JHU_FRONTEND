@@ -9,19 +9,24 @@
     MenuSearchService.$inject = ['menu_items_url', '$http'];
 
     function NarrowItDownController(MenuSearchService) {
-        this.search = () => {
-            MenuSearchService.getMatchedMenuItems()
+        this.search = (searchTerm) => {
+            MenuSearchService.getMatchedMenuItems(searchTerm)
                 .then(response => console.log(response))
                 .catch(error => console.log(error));
         };
     }
 
     function MenuSearchService(menu_items_url, $http) {
-        this.getMatchedMenuItems = () => {
+        this.getMatchedMenuItems = (searchTerm) => {
             return $http({ method: "GET", url: menu_items_url })
                 .then(result => {
-                    console.log(result.data.menu_items);
-                    return result.data.menu_items;
+                    let foundItems = [];
+                    for (let item of result.data.menu_items) {
+                        if (item.description.toLowerCase().indexOf(searchTerm.toLowerCase()) !== -1) {
+                            foundItems.push(item);
+                        }
+                    }
+                    return foundItems;
                 })
                 .catch(error => console.log(error));
         };
