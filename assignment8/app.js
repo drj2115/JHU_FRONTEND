@@ -3,17 +3,22 @@
     angular.module('NarrowItDownApp', [])
         .controller('NarrowItDownController', NarrowItDownController)
         .service('MenuSearchService', MenuSearchService)
-        .constant('menu_items_url', 'https://davids-restaurant.herokuapp.com/menu_items.json');
+        .constant('menu_items_url', 'https://davids-restaurant.herokuapp.com/menu_items.json')
+        .directive('foundItems', FoundItemsDirective);
 
     NarrowItDownController.$inject = ['MenuSearchService'];
     MenuSearchService.$inject = ['menu_items_url', '$http'];
 
     function NarrowItDownController(MenuSearchService) {
+        this.found = [];
         this.search = (searchTerm) => {
             MenuSearchService.getMatchedMenuItems(searchTerm)
-                .then(response => console.log(response))
+                .then(response => {this.found = response; console.log(response);})
                 .catch(error => console.log(error));
         };
+        this.remove = (index) => {
+            this.found.splice(index, 1);
+        }
     }
 
     function MenuSearchService(menu_items_url, $http) {
@@ -29,6 +34,16 @@
                     return foundItems;
                 })
                 .catch(error => console.log(error));
+        };
+    }
+
+    function FoundItemsDirective() {
+        return {
+            templateUrl: 'itemTemplate.html',
+            scope: { items: '<', onRemove: '&' },
+            controller: NarrowItDownController,
+            controllerAs: 'menu_items',
+            bindToController: true
         };
     }
 })();
