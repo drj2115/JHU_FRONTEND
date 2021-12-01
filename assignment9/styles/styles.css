@@ -50,3 +50,8 @@ input[type="text"] {
     transform: rotate(360deg);
   }
 }
+
+ul {
+  list-style-type: none;
+  text-align: center;
+}
