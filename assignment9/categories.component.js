@@ -2,7 +2,7 @@
     'use strict';
     angular.module('MenuApp')
            .component('categories', {
-               templateUrl: '',
+               templateUrl: 'categoryTemplate.html',
                bindings: { items: '<' }
            });
 })();
