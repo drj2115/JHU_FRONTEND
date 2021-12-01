@@ -4,5 +4,12 @@
            .service('MenuDataService', MenuDataService);
 
     function MenuDataService() {
+        this.getAllCategories = () => {
+
+        };
+        this.getItemsForCategory = () => {
+
+        };
+
     }
 })();
