@@ -1,0 +1,30 @@
+<div class="container">
+  <form class="row" name="signUpForm" novalidate>
+    <table>
+      <tr>
+        <td><label>First Name:</label></td>
+        <td><input id="firstName" name="firstName" type="text" ng-model="signUp.user.firstName" placeholder="Steve" required></td>
+      </tr>
+      <tr>
+        <td><label>Last Name:</label></td>
+        <td><input id="lastName" name="lastName" type="text" ng-model="signUp.user.lastName" placeholder="Winwood" required></td>
+      </tr>
+      <tr>
+        <td><label>Email:</label></td>
+        <td><input id="email" name="email" type="email" ng-model="signUp.user.email" placeholder="higher@love.com" required></td>
+      </tr>
+      <tr>
+        <td><label>Phone:</label></td>
+        <td><input type="tel" name="phone" ng-model="signUp.user.phone" placeholder="213-493-4786" pattern="[0-9]{3}[-]?[0-9]{3}[-]?[0-9]{4}" required></td>
+      </tr>
+      <tr>
+        <td><label>Favorite Menu Item:</label></td>
+        <td><input type="text" name="menuShortCode" ng-blur="signUp.validateMenu()" ng-model="signUp.user.menuShortCode" placeholder="B1"><span ng-if="signUp.error">No such menu item exists.</span></td>
+      </tr>
+      <tr>
+        <td><button ng-disabled="signUpForm.$invalid" ng-click="signUp.submit()">Sign Up!</button></td>
+      </tr>
+    </table>
+    <span ng-if="signUp.valid">Your information has been saved.</span>
+  </form>
+</div>
