@@ -1,0 +1,13 @@
+<div class="container">
+    <div ng-if="myInfo.isReady()">
+        <label>{{myInfo.user.firstName}} {{myInfo.user.lastName}}</label><br>
+        <label>Email: {{myInfo.user.email}} Phone: {{myInfo.user.phone}}</label><br>
+        <div ng-hide="!myInfo.favoriteDish">
+            Favorite dish is {{myInfo.favoriteDish.name}} - {{myInfo.favoriteDish.description}}<br>
+            <img ng-src="{{myInfo.getPath()}}/images/{{myInfo.favoriteDish.short_name}}.jpg">
+        </div>
+    </div>
+    <div class="col-xs-12" ng-hide="myInfo.isReady()">
+        Not Signed Up Yet.<a ui-sref="public.signUp">Sign Up Now!</a>
+    </div>
+</div>
